@@ -1,13 +1,100 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  font-size: 62.5%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font: 300 11px/1.4 'Helvetica Neue', sans-serif;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #022c43;
+  overflow: hidden;
+  display: block;
+}
+
+.dashboard {
+  margin-top: 200px;
+  margin-left: 200px;
+
+  .dashboard-submit-form {
+    width: 100%;
+    margin-top: 20px;
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        margin-bottom: 10px;
+        opacity: 0;
+        overflow: hidden;
+        display: block;
+        clear: both;
+        position: relative;
+        animation: fadeInUp 2s 2s;
+        animation-fill-mode: forwards;
+      }
+
+      li.half {
+        width: 49%;
+        margin-left: 2%;
+        float: left;
+        clear: none;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    input[type='text'],
+    input[type='email'] {
+      width: 100%;
+      border: 0;
+      background: #115173;
+      height: 50px;
+      font-size: 16px;
+      color: #fff;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      width: 100%;
+      border: 0;
+      background: #115173;
+      height: 50px;
+      font-size: 16px;
+      color: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+      min-height: 150px;
+    }
+
+    .flat-button {
+      color: #ffd700;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-decoration: none;
+      padding: 8px 10px;
+      border: 1px solid #ffd700;
+      float: left;
+      border-radius: 4px;
+      background: 0 0;
+      text-transform: uppercase;
+      float: right;
+      text-align: center;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    overflow: visible;
+  }
 }
